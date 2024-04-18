@@ -9,7 +9,7 @@ const mongoURL = 'mongodb://localhost:27017/hotels';
 mongoose.connect(mongoURL,{
 });
 
-// create obj that interact with database
+// create obj that interact with datab
 const db = mongoose.connection;
 
 db.on('connected',()=>{
