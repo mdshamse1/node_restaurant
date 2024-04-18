@@ -1,0 +1,5 @@
+#Ignode node_module directory
+node_modules/
+
+#Ignore taskmanagement directory
+taskmanagement/
