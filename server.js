@@ -5,10 +5,12 @@ const db = require('./db')
 const bodyParser = require('body-parser');
 app.use(bodyParser.json()); //store in req.body
 
+
+const PORT = process.env.PORT ||3000
 app.get('/',(req,res)=>{
     res.send("Hey code is worked!");
 })
-const PORT = process.env.PORT ||3000
+
 
 //get person routes here 
 const personRoutes = require('./routes/personRoutes')
