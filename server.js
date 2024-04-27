@@ -28,14 +28,18 @@ const localAuthMiddleware = passport.authenticate('local',{session:false})
 app.use(passport.initialize());
 
 
-app.get('/',localAuthMiddleware,(req,res)=>{
+// app.get('/',localAuthMiddleware,(req,res)=>{  
+//     res.send("Hey code is worked!");
+// })
+app.get('/',(req,res)=>{
     res.send("Hey code is worked!");
 })
 
 
+
 //get person routes here 
 const personRoutes = require('./routes/personRoutes')
-app.use('/person',localAuthMiddleware,personRoutes);
+app.use('/person',personRoutes);
 
 //get menu routes here 
 const menuRoutes = require('./routes/menuRoutes');
